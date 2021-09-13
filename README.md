@@ -1,6 +1,6 @@
-# Create, Update , Delete project client side
+# Login authenticator project
 
-Project files for Client side CRUD application
+Project files for Client side login authenticator project application
 
 # Getting Started with Create React App
 
