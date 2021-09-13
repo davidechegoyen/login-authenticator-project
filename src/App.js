@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router , Route, Switch } from 'react-router-dom';
+import { useState , useEffect } from 'react';
+
 import './App.css';
+import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
+import Homepage from './pages/Homepage';
+import Loginpage from './pages/Loginpage';
+import Signuppage from './pages/Signuppage';
+import Profilepage from './pages/Profilepage';
+
 
 function App() {
+  
+  const [isAuth, setIsAuth] = useState(false)
+
+  useEffect(() => {
+    setIsAuth(localStorage.getItem('_id',))
+  }, [isAuth])  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar isAuth={isAuth}/>
+      <Switch>
+        <Route exact path="/login-authenticator-project">
+          <Homepage />
+        </Route>
+        <Route path="/login_page">
+          <Loginpage />
+        </Route>
+        <Route path="/signup_page">
+          <Signuppage />
+        </Route>
+        <ProtectedRoute path="/profile" component={Profilepage} isAuth={isAuth}/> 
+      </Switch>
+      
+    </Router>
+    
   );
 }
 
