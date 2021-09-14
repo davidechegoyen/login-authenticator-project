@@ -14,8 +14,7 @@ const Profilepage = () => {
     const [firstName, setFirstName] = useState("")
 
     const logOutButtonOnClick = () =>{
-        localStorage.removeItem('_id')
-        window.location.reload()
+        localStorage.removeItem('_id')        
         history.push('/login-authenticator-project/')        
     }
 
