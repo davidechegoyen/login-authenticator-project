@@ -16,7 +16,7 @@ const Profilepage = () => {
     const logOutButtonOnClick = () =>{
         localStorage.removeItem('_id')
         window.location.reload()
-        history.push('/')        
+        history.push('https://davidechegoyen.github.io/login-authenticator-project/')        
     }
 
       const fetchData = async ()=>{

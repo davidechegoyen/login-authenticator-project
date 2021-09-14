@@ -19,11 +19,12 @@ const Loginpage = () => {
         }
         Axios.post('https://loginauthenticator-app-server.herokuapp.com/api/login',userLoggingIn)
                 .then((response)=>localStorage.setItem('_id',response.data))
-                .then(()=>window.location.reload())                
+                .then(()=>window.location.reload())   
+                .then(()=>history.push("/login-authenticator-project"))             
                 .catch((err)=>console.log(err.response.data))
 
         //for now mag reredirect sya lagi, but later it would still go through validate
-        history.push("/login-authenticator-project")        
+          
     }
 
 
