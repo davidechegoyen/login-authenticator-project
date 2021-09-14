@@ -1,5 +1,5 @@
 import { BrowserRouter as Router , Route, Switch } from 'react-router-dom';
-import { useState , useEffect } from 'react';
+import { useState , useEffect ,useMemo} from 'react';
 
 import './App.css';
 import Navbar from './components/Navbar';
@@ -12,14 +12,20 @@ import Profilepage from './pages/Profilepage';
 
 function App() {
   
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState("")
+
+  const checkLogged =useMemo(()=>{
+    return isAuth
+  },[isAuth])
 
   useEffect(() => {
     setIsAuth(localStorage.getItem('_id',))
-  }, [isAuth])  
+  }, [checkLogged])  
+
+  
   return (
     <Router>
-      <Navbar isAuth={isAuth}/>
+      <Navbar isAuth={checkLogged}/>
       <Switch>
         <Route exact path="/login-authenticator-project">
           <Homepage />

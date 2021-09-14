@@ -9,11 +9,12 @@ const Homepage = () => {
     const [users, setUsers] = useState(0)
     const [loading , setLoading ] =useState(false)
 
+    
+
     const fetchData = async ()=>{
         try{
             await Axios.get('https://loginauthenticator-app-server.herokuapp.com/api/fetch-users')
-                .then((response)=>setUsers(response.data))   
-                .then(()=>window.location.reload())
+                .then((response)=>setUsers(response.data))                  
                 .catch((err)=>console.log(err)) 
             setLoading(true)
         }catch(e){
