@@ -13,6 +13,7 @@ const Homepage = () => {
         try{
             await Axios.get('https://loginauthenticator-app-server.herokuapp.com/api/fetch-users')
                 .then((response)=>setUsers(response.data))   
+                .then(()=>window.location.reload())
                 .catch((err)=>console.log(err)) 
             setLoading(true)
         }catch(e){
