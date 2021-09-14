@@ -1,3 +1,7 @@
+# Login authenticator project
+
+Project files for Client side login authenticator project application
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
