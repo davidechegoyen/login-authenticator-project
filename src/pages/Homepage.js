@@ -11,7 +11,7 @@ const Homepage = () => {
 
     const fetchData = async ()=>{
         try{
-            await Axios.get('http://localhost:5000/api/fetch-users')
+            await Axios.get('https://loginauthenticator-app-server.herokuapp.com/api/fetch-users')
                 .then((response)=>setUsers(response.data))   
                 .catch((err)=>console.log(err)) 
             setLoading(true)

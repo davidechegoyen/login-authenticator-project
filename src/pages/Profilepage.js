@@ -23,7 +23,7 @@ const Profilepage = () => {
           const id = {id:localStorage.getItem('_id')}
          /*  console.log(id) */
         try{
-             Axios.post('http://localhost:5000/api/get-profile',id)
+             Axios.post('https://loginauthenticator-app-server.herokuapp.com/api/get-profile',id)
             .then((response)=>{
                 setUsername(response.data.username)
                 setFirstName(response.data.firstName)

@@ -17,7 +17,7 @@ const Loginpage = () => {
             username : username, 
             password : password
         }
-        Axios.post('http://localhost:5000/api/login',userLoggingIn)
+        Axios.post('https://loginauthenticator-app-server.herokuapp.com/api/login',userLoggingIn)
                 .then((response)=>localStorage.setItem('_id',response.data))
                 .then(()=>window.location.reload())                
                 .catch((err)=>console.log(err.response.data))
