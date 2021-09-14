@@ -28,9 +28,9 @@ const Signuppage = () => {
      Axios.post('https://loginauthenticator-app-server.herokuapp.com/api/create-user',obj)
             .then((response)=>console.log(response.data))
             .then(()=>window.location.reload())   
-            .then(()=>history.push('/login-authenticator-project'))
             .catch((err)=>console.log(err.response.data))      
-        
+
+        history.push('/login-authenticator-project')
     }
 
 
