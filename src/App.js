@@ -14,18 +14,16 @@ function App() {
   
   const [isAuth, setIsAuth] = useState("")
 
-  const checkLogged =useMemo(()=>{
-    return isAuth
-  },[isAuth])
+
 
   useEffect(() => {
     setIsAuth(localStorage.getItem('_id',))
-  }, [checkLogged])  
+  }, [isAuth])  
 
   
   return (
     <Router>
-      <Navbar isAuth={checkLogged}/>
+      <Navbar isAuth={isAuth}/>
       <Switch>
         <Route exact path="/login-authenticator-project">
           <Homepage />
