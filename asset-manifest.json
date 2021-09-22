@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/login-authenticator-project/static/css/main.ed2a4aab.chunk.css",
-    "main.js": "/login-authenticator-project/static/js/main.86fed531.chunk.js",
-    "main.js.map": "/login-authenticator-project/static/js/main.86fed531.chunk.js.map",
+    "main.js": "/login-authenticator-project/static/js/main.8219ef65.chunk.js",
+    "main.js.map": "/login-authenticator-project/static/js/main.8219ef65.chunk.js.map",
     "runtime-main.js": "/login-authenticator-project/static/js/runtime-main.ca043ecf.js",
     "runtime-main.js.map": "/login-authenticator-project/static/js/runtime-main.ca043ecf.js.map",
     "static/js/2.946207b6.chunk.js": "/login-authenticator-project/static/js/2.946207b6.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.ca043ecf.js",
     "static/js/2.946207b6.chunk.js",
     "static/css/main.ed2a4aab.chunk.css",
-    "static/js/main.86fed531.chunk.js"
+    "static/js/main.8219ef65.chunk.js"
   ]
 }
