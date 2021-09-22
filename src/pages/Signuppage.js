@@ -30,7 +30,7 @@ const Signuppage = () => {
             .then(()=>window.location.reload())   
             .catch((err)=>console.log(err.response.data))      
 
-        history.push('/login-authenticator-project')
+        history.push('/')
     }
 
 

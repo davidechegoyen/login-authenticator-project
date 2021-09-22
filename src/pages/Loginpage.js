@@ -20,7 +20,7 @@ const Loginpage = () => {
         Axios.post('https://loginauthenticator-app-server.herokuapp.com/api/login',userLoggingIn)
                 .then((response)=>localStorage.setItem('_id',response.data))
                 .then(()=>{                    
-                    history.push("/login-authenticator-project") 
+                    history.push("/") 
                     window.location.reload()
                 })                
                 .catch((err)=>alert(err.response.data))
