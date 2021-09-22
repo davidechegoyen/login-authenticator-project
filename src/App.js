@@ -1,4 +1,4 @@
-import { BrowserRouter as Router , Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router , Route, HashRouter } from 'react-router-dom';
 import { useState , useEffect} from 'react';
 
 import './App.css';
@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <Navbar isAuth={isAuth}/>
-      <Switch>
+      <HashRouter>
         <Route exact path="/login-authenticator-project">
           <Homepage />
         </Route>
@@ -35,7 +35,7 @@ function App() {
           <Signuppage />
         </Route>
         <ProtectedRoute path="/profile" component={Profilepage} isAuth={isAuth}/> 
-      </Switch>
+      </HashRouter>
       
     </Router>
     
