@@ -25,7 +25,7 @@ function App() {
     <Router basename="/login-authenticator-project">
       <Navbar isAuth={isAuth}/>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/login-authenticator-project">
           <Homepage />
         </Route>
         <Route path="/login_page">
